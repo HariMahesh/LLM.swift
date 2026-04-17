@@ -206,7 +206,7 @@ public actor LLMCore {
     }
     
     
-    func prepareContext(for input: String) -> Bool {
+    public func prepareContext(for input: String) -> Bool {
         guard !input.isEmpty else { return false }
         
         tokenBuffer.removeAll()
@@ -310,7 +310,7 @@ public actor LLMCore {
         return true
     }
     
-    func resetContext() {
+    public func resetContext() {
         currentTokenCount = 0
         tokenBuffer.removeAll()
         shouldContinuePredicting = false
@@ -322,7 +322,7 @@ public actor LLMCore {
         }
     }
     
-    func generateResponseStream(from input: String, thinking: ThinkingMode = .none) -> AsyncStream<String> {
+    public func generateResponseStream(from input: String, thinking: ThinkingMode = .none) -> AsyncStream<String> {
         generateResponseStreamWithThinking(from: input, thinking: thinking).response
     }
     
