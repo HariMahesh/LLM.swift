@@ -1,5 +1,3 @@
-import SwiftSyntaxMacros
-
 public protocol Generatable: Codable {
     static var jsonSchema: String { get }
 }

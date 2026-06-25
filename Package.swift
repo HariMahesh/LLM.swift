@@ -39,7 +39,6 @@ let package = Package(
             name: "LLMMacros",
             dependencies: [
                 "LLMMacrosImplementation",
-                .product(name: "SwiftCompilerPlugin", package: "swift-syntax")
             ],
             path: "Sources/LLMMacros"
         ),
